@@ -1,10 +1,10 @@
 from typing import Any, Union
 
-from core.tools.entities.tool_entities import ToolInvokeMessage
-from core.tools.tool.builtin_tool import BuiltinTool
+from dify_plugin import Tool
+from dify_plugin.entities.tool import ToolInvokeMessage
 
 
-class RedisPingTool(BuiltinTool):
+class RedisPingTool(Tool):
     @property
     def host(self) -> str:
         return self.runtime.credentials["host"]

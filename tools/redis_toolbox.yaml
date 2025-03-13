@@ -1,15 +1,11 @@
 identity:
-  name: redis_tools
+  name: redis_toolbox
   author: hove
   label:
-    en_US: redis_tools
-    zh_Hans: redis_tools
-    pt_BR: redis_tools
+    en_US: redis_toolbox
 description:
   human:
     en_US: Redis-based tools
-    zh_Hans: Redis-based tools
-    pt_BR: Redis-based tools
   llm: Redis-based tools
 parameters:
   - name: query
@@ -17,14 +13,10 @@ parameters:
     required: true
     label:
       en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
     human_description:
       en_US: Redis-based tools
-      zh_Hans: Redis-based tools
-      pt_BR: Redis-based tools
     llm_description: Redis-based tools
     form: llm
 extra:
   python:
-    source: tools/redis_tools.py
+    source: tools/redis_toolbox.py

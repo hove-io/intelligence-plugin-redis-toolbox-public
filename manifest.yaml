@@ -1,11 +1,11 @@
 version: 0.0.1
 type: plugin
 author: hove
-name: redis_tools
+name: redis_toolbox
 label:
-  en_US: redis_tools
+  en_US: redis-toolbox
 description:
-  en_US: Redis-based tools
+  en_US: Redis-based toolbox
 icon: icon.svg
 resource:
   memory: 268435456
@@ -22,7 +22,7 @@ resource:
       moderation: false
 plugins:
   tools:
-    - provider/redis_tools.yaml
+    - provider/redis_toolbox.yaml
 meta:
   version: 0.0.1
   arch:
