@@ -1,0 +1,13 @@
+identity:
+  author: hove
+  name: redis_tools
+  label:
+    en_US: redis-tools
+  description:
+    en_US: Redis-based tools
+  icon: icon.svg
+tools:
+  - tools/redis_tools.yaml
+extra:
+  python:
+    source: provider/redis_tools.py
