@@ -1,4 +1,4 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: hove
 name: redis_toolbox
@@ -6,9 +6,12 @@ label:
   en_US: redis-toolbox
 description:
   en_US: Redis-based toolbox
+  zh_Hans: 基于Redis的工具箱
 icon: icon.svg
+tags:
+  - utilities
 resource:
-  memory: 268435456
+  memory: 1048576
   permission:
     tool:
       enabled: true
@@ -24,7 +27,7 @@ plugins:
   tools:
     - provider/redis_toolbox.yaml
 meta:
-  version: 0.0.1
+  version: 0.0.2
   arch:
     - amd64
     - arm64

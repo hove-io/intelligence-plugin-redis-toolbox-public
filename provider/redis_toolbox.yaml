@@ -6,8 +6,48 @@ identity:
   description:
     en_US: Redis-based tools
   icon: icon.svg
+  tags:
+    - utilities
+credentials_for_provider:
+  host:
+    type: text-input
+    required: true
+    label:
+      en_US: Redis host
+      fr_FR: Hôte Redis
+    placeholder:
+      en_US: Please input your Redis host
+      fr_FR: Veuillez saisir votre hôte Redis
+  port:
+    type: text-input
+    required: true
+    label:
+      en_US: Redis port
+      fr_FR: Port Redis
+    placeholder:
+      en_US: Please input your Redis port
+      fr_FR: Veuillez saisir votre port Redis
+  username:
+    type: text-input
+    required: true
+    label:
+      en_US: Redis username
+      fr_FR: Nom d'utilisateur Redis
+    placeholder:
+      en_US: Please input your Redis username
+      fr_FR: Veuillez saisir votre nom d'utilisateur Redis
+  password:
+    type: secret-input
+    required: true
+    label:
+      en_US: Redis password
+      fr_FR: Mot de passe Redis
+    placeholder:
+      en_US: Please input your Redis password
+      fr_FR: Veuillez saisir votre mot de passe Redis
 tools:
-  - tools/redis_toolbox.yaml
+  - tools/cache.yaml
+  - tools/workflow_vars.yaml
 extra:
   python:
     source: provider/redis_toolbox.py

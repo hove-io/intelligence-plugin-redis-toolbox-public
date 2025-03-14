@@ -1,3 +1,4 @@
+from collections.abc import Generator
 from typing import Any, Union
 
 from dify_plugin import Tool
@@ -21,11 +22,7 @@ class RedisPingTool(Tool):
     def password(self) -> str:
         return self.runtime.credentials["password"]
 
-    def _invoke(
-        self,
-        user_id: str,
-        tool_parameters: dict[str, Any],
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         """
         invoke tools
         """

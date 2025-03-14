@@ -1,0 +1,48 @@
+identity:
+  name: cache
+  author: hove
+  label:
+    en_US: Cache
+    fr_FR: Cache
+description:
+  human:
+    en_US: A key-value cache.
+    fr_FR: Un cache clé-valeur.
+  llm: A key-value cache.
+parameters:
+  - name: app_id
+    type: string
+    required: true
+    label:
+      en_US: The app ID that the cached key is in.
+      fr_FR: L'ID de l'application dans laquelle se trouve la clé mise en cache.
+    human_description:
+      en_US: The app ID that the cached key is in.
+      fr_FR: L'ID de l'application dans laquelle se trouve la clé mise en cache.
+    llm_description: The app ID that the cached key is in.
+    form: llm
+  - name: key
+    type: string
+    required: true
+    label:
+      en_US: The key to be cached.
+      fr_FR: La clé à mettre en cache.
+    human_description:
+      en_US: The key to be cached.
+      fr_FR: La clé à mettre en cache.
+    llm_description: The key to be cached.
+    form: llm
+  - name: value
+    type: string
+    required: false
+    label:
+      en_US: The value of the key to be cached.
+      fr_FR: La valeur de la clé à mettre en cache.
+    human_description:
+      en_US: The value of the key to be cached.
+      fr_FR: La valeur de la clé à mettre en cache.
+    llm_description: The value of the key to be cached.
+    form: llm
+extra:
+  python:
+    source: tools/cache.py

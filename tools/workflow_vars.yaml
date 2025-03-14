@@ -1,0 +1,64 @@
+identity:
+  name: workflow_vars
+  author: hove
+  label:
+    en_US: Workflow variables
+    fr_FR: Variables de workflow
+description:
+  human:
+    en_US: A variable-pool-like tool to manage workflow variables.
+    fr_FR: Un outil similaire à un pool de variables pour gérer les variables de workflow.
+  llm: A variable-pool-like tool to manage workflow variables.
+parameters:
+  - name: app_id
+    type: string
+    required: true
+    label:
+      en_US: The app ID that the workflow variables are in.
+      fr_FR: L'ID de l'application dans laquelle se trouvent les variables de workflow.
+    human_description:
+      en_US: The app ID that the workflow variables are in.
+      fr_FR: L'ID de l'application dans laquelle se trouvent les variables de workflow.
+    llm_description: The app ID that the workflow variables are in.
+    form: llm
+  - name: keys
+    type: string
+    required: true
+    label:
+      en_US: The keys to be managed for the given app (comma-separated string).
+      fr_FR: Les clés à gérer pour l'application en question (chaîne de caractères séparées par des virgules).
+    human_description:
+      en_US: The keys to be managed for the given app (comma-separated string).
+      fr_FR: Les clés à gérer pour l'application en question (chaîne de caractères séparées par des virgules).
+    llm_description: The keys to be managed for the given app (comma-separated string).
+    form: llm
+  - name: values
+    type: string
+    required: false
+    label:
+      en_US: The values of the managed keys (comma-separated string).
+      fr_FR: Les valeurs des clés gérées (chaîne de caractères séparées par des virgules).
+    human_description:
+      en_US: The values of the managed keys (comma-separated string).
+      fr_FR: Les valeurs des clés gérées (chaîne de caractères séparées par des virgules).
+    llm_description: The values of the managed keys (comma-separated string).
+    form: llm
+  - name: delete
+    type: select
+    required: false
+    options:
+      - value: True
+        label:
+          en_US: "True"
+      - value: False
+        label:
+          en_US: "False"
+    default: False
+    label:
+      en_US: is it a delete operation?
+    human_description:
+      en_US: is it a delete operation?
+    form: llm
+extra:
+  python:
+    source: tools/workflow_vars.py
